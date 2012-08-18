@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Request</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> Request</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Klasse für das Behandeln von Requests</p>
+<p class="description"><p>Diese Klasse enthält Methoden für das Behandeln von Request-Parametern,  die per &quot;GET&quot; oder &quot;POST&quot; übermittelt wurden.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Steffen Haase &lt;<a href="mailto:info@sh-software.de">info@sh-software.de</a>&gt;</li>
+				<li><span class="field">version:</span> 1.0</li>
+				<li><span class="field">copyright:</span> Copyright (c) 2009-2011 SHS (Steffen Haase Software)</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_Request.php.html">/Request.php</a> (line <span class="field">22</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																												<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+											static <span class="method-result">Object</span>
+										<a href="#getInstance" title="details" class="method-name">getInstance</a>
+										()
+									</div>
+																																																																				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">String</span>
+										<a href="#convertString" title="details" class="method-name">convertString</a>
+											(<span class="var-type">$key</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">Array</span>
+										<a href="#getAllRequests" title="details" class="method-name">getAllRequests</a>
+										()
+									</div>
+																								<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">Integer</span>
+										<a href="#getInt" title="details" class="method-name">getInt</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">Den</span>
+										<a href="#getString" title="details" class="method-name">getString</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">Boolean</span>
+										<a href="#hasRequests" title="details" class="method-name">hasRequests</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">Boolean</span>
+										<a href="#isNumeric" title="details" class="method-name">isNumeric</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setValue" title="details" class="method-name">setValue</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">unknown_type</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">Boolean</span>
+										<a href="#_isSet" title="details" class="method-name">_isSet</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+													<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getInstance</span> (line <span class="line-number">34</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Erzeugt eine Instanz dieser Klasse</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Instanz dieser Klasse</li>
+				<li><span class="field">author:</span> Steffen Haase &lt;<a href="mailto:info@sh-software.de">info@sh-software.de</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Object</span>
+		<span class="method-name">
+			getInstance
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodconvertString" id="convertString"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">convertString</span> (line <span class="line-number">176</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Diese Methode parst den Wert des Parameters $key durch die Funktion  htmlspecialchars($val, ENT_QUOTES) und gibt das Resultat zurück.</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Steffen Haase &lt;<a href="mailto:info@sh-software.de">info@sh-software.de</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			convertString
+		</span>
+					(<span class="var-type">$key</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$key</span>
+				<span class="var-name">$key</span><span class="var-description">: Name des Parameters</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetAllRequests" id="getAllRequests"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getAllRequests</span> (line <span class="line-number">133</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt alle Request-Parameter und die zugehörigen Werte als Array zurück.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Array mit allen Request-Parameter und -Werten</li>
+				<li><span class="field">author:</span> Steffen Haase &lt;<a href="mailto:info@sh-software.de">info@sh-software.de</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Array</span>
+		<span class="method-name">
+			getAllRequests
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetInt" id="getInt"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getInt</span> (line <span class="line-number">86</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Diese Methode gibt den Wert eines Parameters als Integer zurück.</p>
+<p class="description"><p>Wurde der Parameter nicht gefunden oder enthält keinen Wert, so  liefert diese Methode <strong>null</strong> zurück.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Den Wert des Parameters als Integer</li>
+				<li><span class="field">author:</span> Steffen Haase &lt;<a href="mailto:info@sh-software.de">info@sh-software.de</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Integer</span>
+		<span class="method-name">
+			getInt
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$key</span><span class="var-description">: Name des Parameters dessen Wert man haben möchte</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetString" id="getString"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getString</span> (line <span class="line-number">104</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Diese Methode gibt den Wert eines Parameters als String zurück.</p>
+<p class="description"><p>Wurde der Parameter nicht gefunden oder enthält keinen Wert, so  liefert diese Methode <strong>null</strong> zurück.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Wert des Parameters als String, oder null</li>
+				<li><span class="field">author:</span> Steffen Haase &lt;<a href="mailto:info@sh-software.de">info@sh-software.de</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Den</span>
+		<span class="method-name">
+			getString
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$key</span><span class="var-description">: Name des Parameters dessen Wert man haben möchte</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodhasRequests" id="hasRequests"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">hasRequests</span> (line <span class="line-number">144</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prüft ob Request-Parameter übermittelt wurden.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true oder false</li>
+				<li><span class="field">author:</span> Steffen Haase &lt;<a href="mailto:info@sh-software.de">info@sh-software.de</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			hasRequests
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisNumeric" id="isNumeric"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">isNumeric</span> (line <span class="line-number">119</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prüft ob der Wert eines Parameters numerisch ist.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true oder false</li>
+				<li><span class="field">author:</span> Steffen Haase &lt;<a href="mailto:info@sh-software.de">info@sh-software.de</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			isNumeric
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$key</span><span class="var-description">: Name des Parameters dessen Wert geprüft werden soll</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetValue" id="setValue"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setValue</span> (line <span class="line-number">164</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Über diese Methode kann man den Wert des Parameters $key ändern.</p>
+<p class="description"><p>Bsp.<br />  <div class="src-code"><ol><li><div class="src-line">&nbsp;<a href="../Shs/Request.html#methodsetValue">setValue</a><span class="src-sym">(</span><span class="src-str">'param'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'NeuerWert'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Steffen Haase &lt;<a href="mailto:info@sh-software.de">info@sh-software.de</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setValue
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">unknown_type</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$key</span><span class="var-description">: Der Name des Request-Schlüssels</span>			</li>
+					<li>
+				<span class="var-type">unknown_type</span>
+				<span class="var-name">$value</span><span class="var-description">: Der neue Wert der gesetzt werden soll</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_isSet" id="_isSet"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">_isSet</span> (line <span class="line-number">68</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Diese Methode prüft ob ein Parameter gesetzt wurde und auch einen Wert hat.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true oder false</li>
+				<li><span class="field">author:</span> Steffen Haase &lt;<a href="mailto:info@sh-software.de">info@sh-software.de</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			_isSet
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$key</span><span class="var-description">: Name des Parameters der geprüft werden soll</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 22 Jan 2012 18:59:38 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

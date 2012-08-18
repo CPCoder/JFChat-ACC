@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Transport/Esmtp/Auth
+END
+PlainAuthenticatorTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Transport/Esmtp/Auth/PlainAuthenticatorTest.php
+END
+LoginAuthenticatorTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Transport/Esmtp/Auth/LoginAuthenticatorTest.php
+END
+CramMd5AuthenticatorTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Transport/Esmtp/Auth/CramMd5AuthenticatorTest.php
+END

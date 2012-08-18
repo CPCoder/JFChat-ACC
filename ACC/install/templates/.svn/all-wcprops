@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/shs_private/!svn/ver/69/ACC/trunk/install/templates
+END
+tablesetup.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/shs_private/!svn/ver/69/ACC/trunk/install/templates/tablesetup.tpl
+END
+databasesetup.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/shs_private/!svn/ver/69/ACC/trunk/install/templates/databasesetup.tpl
+END
+start.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/shs_private/!svn/ver/69/ACC/trunk/install/templates/start.tpl
+END
+checkfilesystem.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/shs_private/!svn/ver/69/ACC/trunk/install/templates/checkfilesystem.tpl
+END
+finish.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/shs_private/!svn/ver/69/ACC/trunk/install/templates/finish.tpl
+END
+install.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/shs_private/!svn/ver/69/ACC/trunk/install/templates/install.tpl
+END
+setadmin.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/shs_private/!svn/ver/69/ACC/trunk/install/templates/setadmin.tpl
+END

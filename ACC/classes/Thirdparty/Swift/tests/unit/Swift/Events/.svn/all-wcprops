@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Events
+END
+TransportExceptionEventTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Events/TransportExceptionEventTest.php
+END
+EventObjectTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Events/EventObjectTest.php
+END
+ResponseEventTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Events/ResponseEventTest.php
+END
+CommandEventTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Events/CommandEventTest.php
+END
+SimpleEventDispatcherTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Events/SimpleEventDispatcherTest.php
+END
+TransportChangeEventTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Events/TransportChangeEventTest.php
+END
+SendEventTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Events/SendEventTest.php
+END

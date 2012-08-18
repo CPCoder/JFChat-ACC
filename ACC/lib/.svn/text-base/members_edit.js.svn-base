@@ -1,0 +1,1 @@
+$('input[name="password"]').focus();

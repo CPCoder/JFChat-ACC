@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/shs_private/!svn/ver/69/ACC/trunk/install/include
+END
+querys.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/shs_private/!svn/ver/69/ACC/trunk/install/include/querys.php
+END
+setadmin.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/shs_private/!svn/ver/69/ACC/trunk/install/include/setadmin.php
+END
+tablesetup.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/shs_private/!svn/ver/69/ACC/trunk/install/include/tablesetup.php
+END
+databasesetup.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/shs_private/!svn/ver/69/ACC/trunk/install/include/databasesetup.php
+END
+checkfilesystem.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/shs_private/!svn/ver/69/ACC/trunk/install/include/checkfilesystem.php
+END
+finish.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/shs_private/!svn/ver/69/ACC/trunk/install/include/finish.php
+END

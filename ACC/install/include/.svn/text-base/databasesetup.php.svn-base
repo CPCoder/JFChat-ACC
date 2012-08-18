@@ -1,0 +1,47 @@
+<?php
+/*
+ * Project		ACC
+ * Filename		databasesetup.php
+ * Author		Steffen Haase
+ * Date			15.01.2012
+ * Copyright	(c) 2010-2012 SHS (Steffen Haase Software)
+ * Contact		info@sh-software.de
+ */
+
+require_once ACC_PATH_SERVER.'classes/Shs/DbConnect.php';
+require_once ACC_PATH_SERVER.'classes/Shs/Request.php';
+require_once ACC_PATH_SERVER.'classes/Shs/TplEngine.php';
+require_once ACC_PATH_SERVER.'lang/lang_'.ACC_LANG.'.php';
+
+$acc_Template = TplEngine::getInstance();
+$acc_GetPost = Request::getInstance();
+$acc_DB = DBConnect::getInstance();
+
+$acc_Template->setSubTPL('databasesetup');
+if ($acc_DB->hasInstallerError()) {
+	$connect = '<span style="color:#FF0000;font-weight:bold;">Fehler!</span>';
+	$flag = false;
+} else {
+	$connect = '<span style="color:#047719;font-weight:bold;">OK!</span>';
+	$flag = true;
+}
+
+if ($flag === true) {
+	$link = '<a href="install.php?node=3">Schritt 3: Tabellen-Setup</a><br><br>';
+} else {
+	$link = '<a href="install.php?node=2">Daten erneut pr&uuml;fen</a><br><br>';
+}
+
+$acc_Template->assignVars(array(
+	'db_host' => ACC_DB_HOST,
+	'db_name' => ACC_DB_NAME,
+	'db_user' => ACC_DB_USER,
+	'db_pass' => ACC_DB_PASS,
+	'db_port' => ACC_DB_PORT,
+	'db_charset' => ACC_DB_CHAR,
+	'table_prefix' => ACC_DB_PREF,
+	'connection' => $connect,
+	'link' => $link
+));
+
+?>

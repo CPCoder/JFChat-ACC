@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Groups</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> Groups</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Klasse für Gruppen Daten</p>
+<p class="description"><p>Diese Klasse enthält Methoden zum Abfragen verschiedener Daten zu den Gruppen.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Steffen Haase &lt;<a href="mailto:info@sh-software.de">info@sh-software.de</a>&gt;</li>
+				<li><span class="field">version:</span> 1.0</li>
+				<li><span class="field">copyright:</span> Copyright (c) 2009-2011 SHS (Steffen Haase Software)</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_Groups.php.html">/Groups.php</a> (line <span class="field">23</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+											static <span class="method-result">Object</span>
+										<a href="#getInstance" title="details" class="method-name">getInstance</a>
+										()
+									</div>
+																												<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">Boolean</span>
+										<a href="#existsGroup" title="details" class="method-name">existsGroup</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">String</span>
+										<a href="#getGroupDescription" title="details" class="method-name">getGroupDescription</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">String</span>
+										<a href="#getGroupID" title="details" class="method-name">getGroupID</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">Array</span>
+										<a href="#getGroupIDs" title="details" class="method-name">getGroupIDs</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">String</span>
+										<a href="#getGroupIDsAsString" title="details" class="method-name">getGroupIDsAsString</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">Array</span>
+										<a href="#getGroupMembers" title="details" class="method-name">getGroupMembers</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">String</span>
+										<a href="#getGroupName" title="details" class="method-name">getGroupName</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">Array</span>
+										<a href="#getGroupNamesForUser" title="details" class="method-name">getGroupNamesForUser</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">Array</span>
+										<a href="#getGroupPermissions" title="details" class="method-name">getGroupPermissions</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+																								<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">Array</span>
+										<a href="#getUserGroups" title="details" class="method-name">getUserGroups</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+													<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getInstance</span> (line <span class="line-number">35</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt eine Instanz dieser Klasse zurück.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Instanz dieser Klasse</li>
+				<li><span class="field">author:</span> Steffen Haase, &lt;<a href="mailto:info@sh-software.de">info@sh-software.de</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Object</span>
+		<span class="method-name">
+			getInstance
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodexistsGroup" id="existsGroup"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">existsGroup</span> (line <span class="line-number">276</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prüft ob schon eine Gruppe mit dem Namen $name existiert.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true oder false</li>
+				<li><span class="field">author:</span> Steffen Haase &lt;<a href="mailto:info@sh-software.de">info@sh-software.de</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			existsGroup
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$name</span><span class="var-description">: Name der Gruppe</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetGroupDescription" id="getGroupDescription"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getGroupDescription</span> (line <span class="line-number">237</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt die Beschreibung der Gruppe zurück.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Beschreibung der Gruppe</li>
+				<li><span class="field">author:</span> Steffen Haase &lt;<a href="mailto:info@sh-software.de">info@sh-software.de</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			getGroupDescription
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$id</span><span class="var-description">: ID der Gruppe</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetGroupID" id="getGroupID"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getGroupID</span> (line <span class="line-number">257</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt die ID der Gruppe zurück.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Name der Gruppe</li>
+				<li><span class="field">author:</span> Steffen Haase &lt;<a href="mailto:info@sh-software.de">info@sh-software.de</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			getGroupID
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$id</span><span class="var-description">: ID der Gruppe</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetGroupIDs" id="getGroupIDs"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getGroupIDs</span> (line <span class="line-number">88</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt die Gruppen-IDs zurück</p>
+<p class="description"><p>Werden keine Gruppen-IDs gefunden, gibt die Methode <strong>null</strong> zurück.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Ein Array mit den Gruppen-IDs, oder null</li>
+				<li><span class="field">author:</span> Steffen Haase &lt;<a href="mailto:info@sh-software.de">info@sh-software.de</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Array</span>
+		<span class="method-name">
+			getGroupIDs
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$id</span><span class="var-description">: ID des Users</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetGroupIDsAsString" id="getGroupIDsAsString"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getGroupIDsAsString</span> (line <span class="line-number">110</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt die Gruppen-IDs als String durch Komma getrennt zurück.</p>
+<p class="description"><p>Werden keine Gruppen-IDs gefunden, gibt die Methode <strong>null</strong> zurück.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Gruppen-IDs durch Komma getrennt als String</li>
+				<li><span class="field">author:</span> Steffen Haase &lt;<a href="mailto:info@sh-software.de">info@sh-software.de</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			getGroupIDsAsString
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$id</span><span class="var-description">: ID des Users</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetGroupMembers" id="getGroupMembers"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getGroupMembers</span> (line <span class="line-number">194</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt die Mitglieder zurück, wlche in der Gruppe enthalten sind.<br /><br /></p>
+<p class="description"><p>Werden keine Mitglieder gefunden, so gibt diese Methode <strong>null</strong> zurück!</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Multiarray mit den IDs und Namen der Mitglieder</li>
+				<li><span class="field">author:</span> Steffen Haase &lt;<a href="mailto:info@sh-software.de">info@sh-software.de</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Array</span>
+		<span class="method-name">
+			getGroupMembers
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$id</span><span class="var-description">: ID der Gruppe</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetGroupName" id="getGroupName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getGroupName</span> (line <span class="line-number">217</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt den Namen der Gruppe zurück.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Name der Gruppe</li>
+				<li><span class="field">author:</span> Steffen Haase &lt;<a href="mailto:info@sh-software.de">info@sh-software.de</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			getGroupName
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$id</span><span class="var-description">: ID der Gruppe</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetGroupNamesForUser" id="getGroupNamesForUser"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getGroupNamesForUser</span> (line <span class="line-number">163</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt die Namen der Gruppen zurück, die dem User zugeordnet sind.<br /><br /></p>
+<p class="description"><p>Werden keine Gruppen-Informationen gefunden, so gibt diese Methode <strong>null</strong> zurück!</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Ein sortiertes Array mit den Namen der Gruppen</li>
+				<li><span class="field">author:</span> Steffen Haase &lt;<a href="mailto:info@sh-software.de">info@sh-software.de</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Array</span>
+		<span class="method-name">
+			getGroupNamesForUser
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$id</span><span class="var-description">: ID des Users</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetGroupPermissions" id="getGroupPermissions"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getGroupPermissions</span> (line <span class="line-number">133</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Diese Methode gibt die Berechtigungen einer Gruppe zurück.</p>
+<p class="description"><p>Werden keine Berechtiguns-Informationen gefunden, so gibt die Methode <strong>null</strong> zurück.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Sortiertes Array mit den Berechtigungs-Informationen</li>
+				<li><span class="field">author:</span> Steffen Haase, &lt;<a href="mailto:info@sh-software.de">info@sh-software.de</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Array</span>
+		<span class="method-name">
+			getGroupPermissions
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$id</span><span class="var-description">: ID der Gruppe</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetUserGroups" id="getUserGroups"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getUserGroups</span> (line <span class="line-number">64</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Diese Methode gibt alle Gruppen eines ACC-Users zurück.</p>
+<p class="description"><p>Werden keine Gruppeninformationen gefunden, gibt die Methode <strong>null</strong> zurück!</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Multiarray mit den Gruppeninformationen als Objekt</li>
+				<li><span class="field">author:</span> Steffen Haase, &lt;<a href="mailto:info@sh-software.de">info@sh-software.de</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Array</span>
+		<span class="method-name">
+			getUserGroups
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$id</span><span class="var-description">: ID des Users</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 22 Jan 2012 18:59:38 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

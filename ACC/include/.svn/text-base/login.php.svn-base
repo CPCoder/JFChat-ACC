@@ -1,0 +1,87 @@
+<?php
+/*
+ * Project		ACC
+ * Filename		login.php
+ * Author		Steffen Haase
+ * Date			03.10.2011
+ * Copyright	(c) 2010-2011 SHS (Steffen Haase Software)
+ * Contact		info@sh-software.de
+ */
+
+require_once ACC_PATH_SERVER.'classes/Shs/DbConnect.php';
+require_once ACC_PATH_SERVER.'classes/Shs/Request.php';
+require_once ACC_PATH_SERVER.'classes/Shs/SessionManager.php';
+require_once ACC_PATH_SERVER.'classes/Shs/TplEngine.php';
+
+$acc_DB = DBConnect::getInstance();
+$acc_GetPost = Request::getInstance();
+$acc_Session = SessionManager::getInstance();
+$acc_Template = TplEngine::getInstance();
+
+$js_login_file = ACC_PATH_SERVER.'lib/login.js';
+if (is_file($js_login_file)) {
+	$js_login = file_get_contents($js_login_file);
+}
+
+if ($acc_GetPost->_isSet('submit')) {
+	$flag = true;
+	if ($acc_GetPost->getString('csr') == $_SESSION['csr']) {
+		unset ($_SESSION['csr']);
+		if (!$acc_GetPost->_isSet('name') || !$acc_GetPost->_isSet('password')) {
+			$flag = false;
+			$error = str_replace('{MESSAGE}', $acc_Language['msg']['error']['emptylogin'], $acc_Language['msg']['error']['wrapper']);
+		} else {
+			$user = $acc_DB->queryObjectArray(
+				"SELECT id, username FROM ".TABLE_JF_REGISTRY." ".
+				"WHERE username='".$acc_DB->escapeString($acc_GetPost->getString('name'))."' ".
+				"AND password='".hash('md5', $acc_GetPost->getString('password'))."' ".
+				"AND acc=1"
+			, 'login.php');
+			if ($user === false || $user === null) {
+				$flag = false;
+				$error = str_replace('{MESSAGE}', $acc_Language['msg']['error']['wronglogin'], $acc_Language['msg']['error']['wrapper']);
+			} else {
+				
+				$_SESSION['loggedin']	= true;
+				$_SESSION['userid']		= $user[0]->id;
+				$acc_Session->setUserData(); 
+				$acc_Template->setSubTPL('sysmessage');
+				$acc_Template->assignVars(array(
+					'type' => $acc_Language['msg']['type']['sys'],
+					'message' => $acc_Language['msg']['system']['loginok'],
+					'redirect' => 'true',
+					'redirect_url' => ACC_COMPLETE_URL.'index.php?site=overview'
+				));
+			}
+		}
+		if ($flag === false) {
+			$csr = getHash(generate_pass());
+			$_SESSION['csr'] = $csr;
+			$acc_Template->setSubTPL('login');
+			$acc_Template->assignVars(array(
+				'csr' => $csr,
+				'errors' => $error,
+				'jscript' => $js_login
+			));
+		}
+	} else {
+		$csr = getHash(generate_pass());
+		unset ($_SESSION['csr']);
+		$_SESSION['csr'] = $csr;
+		$acc_Template->setSubTPL('login');
+		$acc_Template->assignVars(array(
+			'csr' => $csr,
+			'jscript' => $js_login
+		));
+	}
+} else {
+	$csr = getHash(generate_pass());
+	$_SESSION['csr'] = $csr;
+	$acc_Template->setSubTPL('login');
+	$acc_Template->assignVars(array(
+		'csr' => $csr,
+		'jscript' => $js_login
+	));
+}
+
+?>

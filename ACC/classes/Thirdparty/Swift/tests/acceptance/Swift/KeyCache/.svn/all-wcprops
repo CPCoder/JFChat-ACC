@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/acceptance/Swift/KeyCache
+END
+DiskKeyCacheAcceptanceTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/acceptance/Swift/KeyCache/DiskKeyCacheAcceptanceTest.php
+END
+ArrayKeyCacheAcceptanceTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/acceptance/Swift/KeyCache/ArrayKeyCacheAcceptanceTest.php
+END

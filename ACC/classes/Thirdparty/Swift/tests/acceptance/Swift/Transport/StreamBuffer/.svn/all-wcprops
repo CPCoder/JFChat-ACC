@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/acceptance/Swift/Transport/StreamBuffer
+END
+TlsSocketAcceptanceTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/acceptance/Swift/Transport/StreamBuffer/TlsSocketAcceptanceTest.php
+END
+ProcessAcceptanceTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/acceptance/Swift/Transport/StreamBuffer/ProcessAcceptanceTest.php
+END
+SslSocketAcceptanceTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/acceptance/Swift/Transport/StreamBuffer/SslSocketAcceptanceTest.php
+END
+BasicSocketAcceptanceTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/acceptance/Swift/Transport/StreamBuffer/BasicSocketAcceptanceTest.php
+END
+AbstractStreamBufferAcceptanceTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/acceptance/Swift/Transport/StreamBuffer/AbstractStreamBufferAcceptanceTest.php
+END
+SocketTimeoutTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/acceptance/Swift/Transport/StreamBuffer/SocketTimeoutTest.php
+END

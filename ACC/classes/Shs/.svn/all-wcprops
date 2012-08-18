@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Shs
+END
+SessionManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Shs/SessionManager.php
+END
+PasswordGenerator.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Shs/PasswordGenerator.php
+END
+DebugManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Shs/DebugManager.php
+END
+Tools.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Shs/Tools.php
+END
+User.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Shs/User.php
+END
+DbConnect.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Shs/DbConnect.php
+END
+File.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Shs/File.php
+END
+Request.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Shs/Request.php
+END
+ErrorHandler.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Shs/ErrorHandler.php
+END
+TplEngine.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Shs/TplEngine.php
+END
+Groups.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Shs/Groups.php
+END
+Navigation.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Shs/Navigation.php
+END

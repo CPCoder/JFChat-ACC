@@ -1,0 +1,67 @@
+<?php
+/*
+ * Project		
+ * Filename		setadmin.php
+ * Author		Steffen Haase
+ * Date			21.01.2012
+ * Copyright	(c) 2010-2012 SHS (Steffen Haase Software)
+ * Contact		info@sh-software.de
+ */
+
+require_once ACC_PATH_SERVER.'classes/Shs/DbConnect.php';
+require_once ACC_PATH_SERVER.'classes/Shs/Request.php';
+require_once ACC_PATH_SERVER.'classes/Shs/TplEngine.php';
+
+$acc_Template = TplEngine::getInstance();
+$acc_GetPost = Request::getInstance();
+$acc_DB = DBConnect::getInstance();
+
+if (
+	$acc_GetPost->_isSet('ac') &&
+	$acc_GetPost->_isSet('id') &&
+	$acc_GetPost->getString('ac') == 'add'
+) {
+	$dummy = $acc_DB->executeQuery(
+		"UPDATE ".TABLE_JF_REGISTRY." ".
+		"SET acc=1, acc_mainadmin=1 ".
+		"WHERE id='".$acc_DB->escapeString($acc_GetPost->getInt('id'))."'"
+	, 'setadmin.php');
+	$dummy = $acc_DB->executeQuery(
+		"INSERT INTO ".TABLE_ACC_GROUPMAP." (userid, groupid) ".
+		"VALUES ('".$acc_DB->escapeString($acc_GetPost->getInt('id'))."', 1)"
+	, 'setadmin.php');
+	header('location:install.php?node=5');
+}
+
+$acc_Template->setSubTPL('setadmin');
+$row = '<tr><td colspan="2"><span style="font-weight:bold;">Bitte einen Usernamen angeben!</span></td></tr>';
+if ($acc_GetPost->_isSet('name')) {
+	$res = $acc_DB->queryObjectArray(
+		"SELECT id, username, acc ".
+		"FROM ".TABLE_JF_REGISTRY." ".
+		"WHERE username='".$acc_DB->escapeString($acc_GetPost->getString('name'))."' ".
+		"AND aktiv=1 AND rechte=99"
+	, 'setadmin.php');
+	
+	if ($res !== false) {
+		if ($res !== null) {
+			$row = '<tr><td style="width:40%;"><b>'.$res[0]->username.'</b>'.
+					'<td style="width:60%;"><a href="install.php?node=4&amp;'.
+					'ac=add&amp;id='.$res[0]->id.'">Als Admin festlegen</a>'.
+					'</td></tr><tr><td colspan="2">Info:<br>- User hat Rechte '.
+					'99 und ist aktiv.</td></tr>';
+		} else {
+			$row = '<tr><td colspan="2"><span style="color:#FF0000;font-weight:bold;">Der angegebene User wurde '.
+					'entweder nicht gefunden, oder besitzt nicht die geforderten Rechte!</span></td></tr>';
+		}
+	} else {
+		$row = '<tr><td colspan="2"><span style="color:#FF0000;font-weight:bold;">MySQL-Fehler</span></td></tr>';
+	}
+}
+
+$acc_Template->assignVars(array(
+	'row' => $row,
+));
+
+
+?>

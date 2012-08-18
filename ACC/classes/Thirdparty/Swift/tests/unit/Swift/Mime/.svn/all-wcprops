@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Mime
+END
+SimpleMessageTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Mime/SimpleMessageTest.php
+END
+EmbeddedFileTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Mime/EmbeddedFileTest.php
+END
+MimePartTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Mime/MimePartTest.php
+END
+AbstractMimeEntityTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Mime/AbstractMimeEntityTest.php
+END
+SimpleMimeEntityTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Mime/SimpleMimeEntityTest.php
+END
+SimpleHeaderFactoryTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Mime/SimpleHeaderFactoryTest.php
+END
+AttachmentTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Mime/AttachmentTest.php
+END
+SimpleHeaderSetTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Mime/SimpleHeaderSetTest.php
+END

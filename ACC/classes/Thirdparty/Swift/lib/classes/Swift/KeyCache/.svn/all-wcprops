@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/KeyCache
+END
+KeyCacheInputStream.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/KeyCache/KeyCacheInputStream.php
+END
+NullKeyCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/KeyCache/NullKeyCache.php
+END
+DummyKeyCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/KeyCache/DummyKeyCache.php
+END
+ArrayKeyCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/KeyCache/ArrayKeyCache.php
+END
+DiskKeyCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/KeyCache/DiskKeyCache.php
+END
+SimpleKeyCacheInputStream.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/KeyCache/SimpleKeyCacheInputStream.php
+END

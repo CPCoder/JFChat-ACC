@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>phpDocumentor Parser Errors and Warnings</title>
+			<link rel="stylesheet" href="media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<a href="#Post-parsing">Post-parsing</a><br>
+<a href="#DebugManager.php">DebugManager.php</a><br>
+<a href="#ErrorHandler.php">ErrorHandler.php</a><br>
+<a href="#File.php">File.php</a><br>
+<a href="#Groups.php">Groups.php</a><br>
+<a href="#Navigation.php">Navigation.php</a><br>
+<a href="#PasswordGenerator.php">PasswordGenerator.php</a><br>
+<a href="#Request.php">Request.php</a><br>
+<a href="#SessionManager.php">SessionManager.php</a><br>
+<a href="#Tools.php">Tools.php</a><br>
+<a href="#TplEngine.php">TplEngine.php</a><br>
+<a href="#User.php">User.php</a><br>
+<a name="DbConnect.php"></a>
+<h1>DbConnect.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 21</b> - DocBlock would be page-level, but precedes class "DBConnect", use another DocBlock to document the file<br>
+<a name="DebugManager.php"></a>
+<h1>DebugManager.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 239</b> - File "/home/sh/Workspaces/JFChat-Software/ACC/classes/Shs/DebugManager.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ErrorHandler.php"></a>
+<h1>ErrorHandler.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 55</b> - File "/home/sh/Workspaces/JFChat-Software/ACC/classes/Shs/ErrorHandler.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="File.php"></a>
+<h1>File.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 21</b> - DocBlock would be page-level, but precedes class "File", use another DocBlock to document the file<br>
+<a name="Groups.php"></a>
+<h1>Groups.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 287</b> - File "/home/sh/Workspaces/JFChat-Software/ACC/classes/Shs/Groups.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="Navigation.php"></a>
+<h1>Navigation.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 264</b> - File "/home/sh/Workspaces/JFChat-Software/ACC/classes/Shs/Navigation.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="PasswordGenerator.php"></a>
+<h1>PasswordGenerator.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 21</b> - DocBlock would be page-level, but precedes class "PasswordGenerator", use another DocBlock to document the file<br>
+<a name="Request.php"></a>
+<h1>Request.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 22</b> - DocBlock would be page-level, but precedes class "Request", use another DocBlock to document the file<br>
+<a name="SessionManager.php"></a>
+<h1>SessionManager.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 167</b> - File "/home/sh/Workspaces/JFChat-Software/ACC/classes/Shs/SessionManager.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="Tools.php"></a>
+<h1>Tools.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 85</b> - File "/home/sh/Workspaces/JFChat-Software/ACC/classes/Shs/Tools.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="TplEngine.php"></a>
+<h1>TplEngine.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 22</b> - DocBlock would be page-level, but precedes class "TplEngine", use another DocBlock to document the file<br>
+<a name="User.php"></a>
+<h1>User.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 150</b> - File "/home/sh/Workspaces/JFChat-Software/ACC/classes/Shs/User.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 22 Jan 2012 18:59:38 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</body>
+</html>

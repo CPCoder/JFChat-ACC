@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay
+END
+Action.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/Action.php
+END
+StateMachine.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/StateMachine.php
+END
+Expectations.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/Expectations.php
+END
+SimpleStatePredicate.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/SimpleStatePredicate.php
+END
+InvocationHandler.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/InvocationHandler.php
+END
+Description.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/Description.php
+END
+Expectation.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/Expectation.php
+END
+InvocationProxy.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/InvocationProxy.php
+END
+SimpleState.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/SimpleState.php
+END
+Sequence.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/Sequence.php
+END
+Mockery.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/Mockery.php
+END
+SimpleInvocation.php
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/SimpleInvocation.php
+END
+States.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/States.php
+END
+StatePredicate.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/StatePredicate.php
+END
+MockGenerator.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/MockGenerator.php
+END
+MockObject.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/MockObject.php
+END
+SimpleDescription.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/SimpleDescription.php
+END
+ExpectationProvider.php
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/ExpectationProvider.php
+END
+InvocationRecorder.php
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/InvocationRecorder.php
+END
+Invocation.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/Invocation.php
+END
+NotSatisfiedException.php
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/NotSatisfiedException.php
+END
+State.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/State.php
+END
+Matcher.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/Matcher.php
+END
+SimpleSequence.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/SimpleSequence.php
+END
+SelfDescribing.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/test-suite/lib/yaymock/classes/Yay/SelfDescribing.php
+END

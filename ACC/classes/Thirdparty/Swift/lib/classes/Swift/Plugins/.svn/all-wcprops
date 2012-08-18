@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Plugins
+END
+MessageLogger.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Plugins/MessageLogger.php
+END
+PopBeforeSmtpPlugin.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Plugins/PopBeforeSmtpPlugin.php
+END
+RedirectingPlugin.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Plugins/RedirectingPlugin.php
+END
+ThrottlerPlugin.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Plugins/ThrottlerPlugin.php
+END
+BandwidthMonitorPlugin.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Plugins/BandwidthMonitorPlugin.php
+END
+ImpersonatePlugin.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Plugins/ImpersonatePlugin.php
+END
+DecoratorPlugin.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Plugins/DecoratorPlugin.php
+END
+AntiFloodPlugin.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Plugins/AntiFloodPlugin.php
+END
+Logger.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Plugins/Logger.php
+END
+Reporter.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Plugins/Reporter.php
+END
+LoggerPlugin.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Plugins/LoggerPlugin.php
+END
+ReporterPlugin.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Plugins/ReporterPlugin.php
+END
+Sleeper.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Plugins/Sleeper.php
+END
+Timer.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Plugins/Timer.php
+END

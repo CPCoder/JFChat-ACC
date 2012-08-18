@@ -1,0 +1,197 @@
+<?php
+/*
+ * Project		ACC
+ * Filename		members_new.php
+ * Author		Steffen Haase
+ * Date			11.10.2011
+ * Copyright	(c) 2010-2011 SHS (Steffen Haase Software)
+ * Contact		info@sh-software.de
+ */
+
+require_once ACC_PATH_SERVER.'classes/Shs/DbConnect.php';
+require_once ACC_PATH_SERVER.'classes/Shs/Request.php';
+require_once ACC_PATH_SERVER.'classes/Shs/SessionManager.php';
+require_once ACC_PATH_SERVER.'classes/Shs/TplEngine.php';
+require_once ACC_PATH_SERVER.'classes/Thirdparty/Swift/lib/swift_required.php';
+require_once ACC_PATH_SERVER.'include/functions.php';
+
+$acc_DB = DBConnect::getInstance();
+$acc_GetPost = Request::getInstance();
+$acc_Session = SessionManager::getInstance();
+$acc_Template = TplEngine::getInstance();
+
+$js_tools = ACC_PATH_SERVER.'lib/tools.js';
+$js_membersnew = ACC_PATH_SERVER.'lib/members_new.js';
+
+$namelengtherror = str_replace('{NAME_MIN_LENGTH}', $acc_Config['username']['length']['min'], $acc_Language['msg']['check']['namelength']);
+$namelengtherror = str_replace('{NAME_MAX_LENGTH}', $acc_Config['username']['length']['max'], $namelengtherror);
+
+if ($acc_Config['nickpage']['used'] === true) {
+	$np_columns = array('nplock', 'nponlyfriends');
+	$registry = array_merge((array)$registry, (array)$np_columns);
+	$requiredfields = array_merge((array)$requiredfields, (array)$np_columns);
+}
+
+if ($acc_GetPost->getInt('save') == 1 && $_SESSION['csr'] == $acc_GetPost->getString('csr')) {
+	$errors = '';
+	$flag = true;
+	foreach ($requiredfields as $key => $val) {
+		if ($acc_GetPost->_isSet($val) && $val != 'password') {
+			$flag = false;
+			$errors .= $acc_Language['msg']['error'][$val];
+		}
+	}
+	if (strlen($acc_GetPost->getString('password')) < 8) {
+		$flag = false;
+		$errors .= $acc_Language['msg']['error']['password'];
+	}
+	if ($acc_GetPost->_isSet('geburtsdatum') && 
+		!checkBirthdate($acc_GetPost->getString('geburtsdatum')) && 
+		$flag) {
+		$flag = false;
+		$errors .= $acc_Language['msg']['error']['geburtsdatum'];
+	}
+	$namecheck = isRegistered($acc_GetPost->getString('username'), $acc_DB);
+	if ($namecheck === null) {
+		$errors .= $acc_Language['msg']['error']['msqlerror'];
+		$flag = false;
+	} else {
+		if ($namecheck === true) {
+			$errors .= $acc_Language['msg']['check']['isregistered'];
+			$flag = false;
+		}
+	}
+	if (strlen($acc_GetPost->getString('username')) <= $acc_Config['username']['length']['min'] || 
+		strlen($acc_GetPost->getString('username')) >= $acc_Config['username']['length']['max']) {
+		$errors .= $namelengtherror;
+		$flag = false;
+	}
+	
+	if ($flag === false) {
+		$acc_Template->setSubTPL('members_new');
+		foreach ($registry as $key => $val) {
+			$acc_Template->assignVar($val, $acc_GetPost->getString($val));
+		}
+		$csr = getHash(generate_pass());
+		$_SESSION['csr'] = $csr;
+		$acc_Template->assignVars(array(
+				'errors' => str_replace(
+							'{MESSAGE}', 
+							'<b>Fehler!</b><br>'.$errors.'<br>', 
+							$acc_Language['msg']['error']['wrapper']),
+				'csr' => $csr,
+		));
+		if (is_file($js_tools) && is_file($js_membersnew)) {
+			$javascript = file_get_contents($js_tools);
+			$javascript .= file_get_contents($js_membersnew);
+			$acc_Template->assignVar('jscript', $javascript);
+		}
+		$acc_Template->assignVars(array(
+			'checkurl' => ACC_COMPLETE_URL.'index.php?site=checkname',
+			'error_name_length' => $namelengtherror,
+			'name_min_length' => $acc_Config['username']['length']['min'],
+			'name_max_length' => $acc_Config['username']['length']['max']
+		));
+	} else {
+		$inserts = '';
+		unset($_SESSION['csr']);
+		foreach ($registry as $key => $val) {
+			if ($val != 'password' && $val != 'farbcode' && $val != 'geburtsdatum') {
+				if ($acc_GetPost->isNumeric($val)) {
+					$inserts[$val] = $acc_DB->escapeString($acc_GetPost->getInt($val));
+				} else {
+					$inserts[$val] = '\''.$acc_DB->escapeString($acc_GetPost->getString($val)).'\'';
+				}
+			} else {
+				if ($val == 'password') {
+					$inserts[$val] = '\''.md5($acc_GetPost->getString($val)).'\'';
+				} else{
+					$inserts[$val] = '\''.$acc_DB->escapeString($acc_GetPost->getString($val)).'\'';
+				}
+			}
+		}
+		sort($registry);
+		ksort($inserts);
+		$registry = implode(", ", $registry);
+		$insertfields = implode(", ", $inserts);
+		$dbflag = $acc_DB->executeQuery(
+				"INSERT INTO ".TABLE_JF_REGISTRY." (".$registry.") ".
+				"VALUES(".$insertfields.")"
+		, 'members_new.php');
+		$acc_Template->setSubTPL('sysmessage');
+		if ($dbflag === true) {
+			$memberurl = ACC_COMPLETE_URL.'index.php?site=members&amp;page=1';
+			$email_text = $acc_Language['mail']['register']['text'];
+			$email_text = str_replace('{USERNAME}', $acc_GetPost->getString('username'), $email_text);
+			$email_text = str_replace('{PASSWORD}', $acc_GetPost->getString('password'), $email_text);
+			$email_text = str_replace('{COMURL}', JFCHAT_COMPLETEURL, $email_text);
+			$email_text = str_replace('{COMNAME}', JFCHAT_COMNAME, $email_text);
+			$transport = Swift_SmtpTransport::newInstance()
+				->setHost($acc_Config['mail']['smtp']['host'])
+				->setPort($acc_Config['mail']['smtp']['port'])
+				->setEncryption($acc_Config['mail']['encryption'])
+				->setUsername($acc_Config['mail']['smtp']['user'])
+				->setPassword($acc_Config['mail']['smtp']['pass']);
+			$mailer = Swift_Mailer::newInstance($transport);
+			$message = Swift_Message::newInstance()
+				->setCharset(ACC_CHARSET)
+				->setSubject($acc_Language['mail']['register']['subject'])
+				->setFrom(array($acc_Config['mail']['from'] => $acc_Config['mail']['fromname']))
+				->setTo(array($acc_GetPost->getString('emailadresse') => $acc_GetPost->getString('username')))
+				->setBody($email_text)
+				;
+			$sysmessage = $acc_Language['msg']['system']['membersaveok'];
+			if (!$mailer->send($message, $failures)) {
+				$sysmessage .= print_r($failures, true);
+			}
+			$acc_Template->assignVars(array(
+							'type' => $acc_Language['msg']['type']['sys'],
+							'message' => $sysmessage,
+							'username' => $acc_GetPost->getString('username'),
+							'member_url' => $memberurl
+			));
+		} else {
+			$memberurl = ACC_COMPLETE_URL.'index.php?site=members&amp;page=1';
+			$acc_Template->assignVars(array(
+							'type' => $acc_Language['msg']['type']['sys'],
+							'message' => $acc_Language['msg']['system']['membersavenotok'],
+							'username' => $acc_GetPost->getString('username'),
+							'member_url' => $memberurl
+			));
+		}
+	}
+} else {
+	$acc_Template->setSubTPL('members_new');
+	$csr = getHash(generate_pass());
+	$_SESSION['csr'] = $csr;
+	if (is_file($js_tools) && is_file($js_membersnew)) {
+		$javascript = file_get_contents($js_tools);
+		$javascript .= file_get_contents($js_membersnew);
+		$acc_Template->assignVar('jscript', $javascript);
+	}
+	$acc_Template->getTPL();
+	$acc_Template->assignVars(array(
+		'maxfriends' => 25,
+		'maxpms' => 30,
+		'punkte' => 0,
+		'rechte' => 2,
+		'forenrechte' => 2,
+		'farbcode' => '000000',
+		'geschlecht' => 0,
+		'avatar' => $acc_Config['avatar']['default'],
+		'geburtsdatum' => '1979-01-01',
+		'csr' => $csr,
+		'checkurl' => ACC_COMPLETE_URL.'index.php?site=checkname',
+		'error_name_length' => $namelengtherror,
+		'name_min_length' => $acc_Config['username']['length']['min'],
+		'name_max_length' => $acc_Config['username']['length']['max']
+	));
+	if ($acc_Config['nickpage']['used'] === true) {
+		$acc_Template->assignVars(array(
+			'nplock' => 0,
+			'nponlyfriends' => 0
+		));
+	}
+}
+
+?>

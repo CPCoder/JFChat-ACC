@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/acceptance/Swift/Mime/ContentEncoder
+END
+PlainContentEncoderAcceptanceTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/acceptance/Swift/Mime/ContentEncoder/PlainContentEncoderAcceptanceTest.php
+END
+Base64ContentEncoderAcceptanceTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/acceptance/Swift/Mime/ContentEncoder/Base64ContentEncoderAcceptanceTest.php
+END
+QpContentEncoderAcceptanceTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/acceptance/Swift/Mime/ContentEncoder/QpContentEncoderAcceptanceTest.php
+END

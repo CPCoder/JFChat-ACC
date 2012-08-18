@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Plugins/Loggers
+END
+EchoLoggerTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Plugins/Loggers/EchoLoggerTest.php
+END
+ArrayLoggerTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/unit/Swift/Plugins/Loggers/ArrayLoggerTest.php
+END

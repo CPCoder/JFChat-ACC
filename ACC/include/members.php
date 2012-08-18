@@ -1,0 +1,208 @@
+<?php
+/*
+ * Project		ACC
+ * Filename		members.php
+ * Author		Steffen Haase
+ * Date			11.10.2011
+ * License		GPL v3
+ */
+
+require_once ACC_PATH_SERVER.'classes/Shs/DbConnect.php';
+require_once ACC_PATH_SERVER.'classes/Shs/Request.php';
+require_once ACC_PATH_SERVER.'classes/Shs/SessionManager.php';
+require_once ACC_PATH_SERVER.'classes/Shs/TplEngine.php';
+
+$acc_DB = DBConnect::getInstance();
+$acc_GetPost = Request::getInstance();
+$acc_Session = SessionManager::getInstance();
+$acc_Template = TplEngine::getInstance();
+
+if ($acc_GetPost->_isSet('page')) {
+	$page = $acc_GetPost->getInt('page');
+} else {
+	$page = 1;
+}
+$start = $page * ACC_MAX_ENTRIES - ACC_MAX_ENTRIES;
+$acc_Template->setSubTPL('members');
+$flag = true;
+$orders = array('all','female','male','unknown','status','rdown','rup');
+$where = '';
+$sort = 'all';
+
+if ($acc_GetPost->_isSet('sort')) {
+	if (in_array($acc_GetPost->getString('sort'), $orders)) {
+		switch ($acc_GetPost->getString('sort')) {
+			case $orders[0]:
+				$order = 'username';
+				break;
+			case $orders[1]:
+				$order = 'username';
+				$where = 'WHERE geschlecht=1 ';
+				break;
+			case $orders[2]:
+				$order = 'username';
+				$where = 'WHERE geschlecht=0 ';
+				break;
+			case $orders[3]:
+				$order = 'username';
+				$where = 'WHERE geschlecht=2 ';
+				break;
+			case $orders[4]:
+				$order = 'username';
+				$where = 'WHERE rechte>=5 ';
+				break;
+			case $orders[5]:
+				$order = 'rechte DESC';
+				break;
+			case $orders[6]:
+				$order = 'rechte';
+				break;
+			default:
+				$order = 'username';
+		}
+		$acc_GetPost->setValue('flag', 0);
+		$sort = $acc_GetPost->getString('sort');
+	}
+} else {
+	$order = 'username';
+}
+
+if ($acc_GetPost->_isSet('ac')) {
+	if ($acc_GetPost->getString('ac') == 'deactivate') {
+		$acc_DB->executeQuery(
+			"UPDATE ".TABLE_JF_REGISTRY." ".
+			"SET aktiv=0 WHERE id='".$acc_DB->escapeString($acc_GetPost->getInt('id'))."'"
+		, 'members.php');		
+	}
+	if ($acc_GetPost->getString('ac') == 'activate') {
+		$acc_DB->executeQuery(
+			"UPDATE ".TABLE_JF_REGISTRY." ".
+			"SET aktiv=1 WHERE id='".$acc_DB->escapeString($acc_GetPost->getInt('id'))."'", 
+		'members.php');
+	}
+}
+
+if ($acc_GetPost->getInt('flag') == 1) {
+	if ($acc_GetPost->getInt('enc') == 1) {
+		$search = trim(urldecode($acc_GetPost->getString('search')));
+	} else {
+		$search = $acc_GetPost->getString('search');
+	}
+	if (strlen($search) < 3) {
+		$error = $error = str_replace(
+								'{message}', 
+								$acc_Language['msg']['error']['emptymembersearch'], 
+								$acc_Language['msg']['error']['color']
+							);
+		$acc_Template->replaceVar('errors', $error);
+	} else {
+		$flag = false;
+		$ar = $acc_DB->queryObjectArray(
+					"SELECT id, username, rechte, forenrechte, aktiv, geschlecht ".
+					"FROM ".TABLE_JF_REGISTRY." ".
+					"WHERE username LIKE '%".$acc_DB->escapeString($search)."%' ".
+					"ORDER BY username LIMIT $start, ".ACC_MAX_ENTRIES.""
+		, 'members.php');
+		
+		$count = $acc_DB->queryCount(
+					"SELECT COUNT(id) ".
+					"FROM ".TABLE_JF_REGISTRY." ".
+					"WHERE username LIKE '%".$acc_DB->escapeString($search)."%' ".
+					"ORDER BY username"
+		, 'members.php');
+	}
+}
+if ($flag === true) {
+	$ar = $acc_DB->queryObjectArray(
+				"SELECT id, username, rechte, forenrechte, aktiv, geschlecht ".
+				"FROM ".TABLE_JF_REGISTRY." ".
+				$where.
+				"ORDER BY ".$order." LIMIT $start, ".ACC_MAX_ENTRIES.""
+	, 'members.php');
+	
+	$where = trim($where);
+	$count = $acc_DB->queryCount(
+				"SELECT COUNT(id) ".
+				"FROM ".TABLE_JF_REGISTRY." ".
+				$where
+	, 'members.php');
+}
+
+$sitenavigation = '';
+$listflag = true;
+if ($count !== false) {
+	$SitesComplete = ceil($count / ACC_MAX_ENTRIES);
+	if ($start > $SitesComplete) {
+		$start = $SitesComplete;
+	}
+	if ($flag === false) {
+		$ext = 'site=members&amp;flag=1&amp;enc=1&amp;search='.urlencode($search);
+	} else {
+		$ext = 'site=members&amp;sort='.$sort;
+	}
+	$sitenavigation = buildCompleteNavigation($acc_Language, $count, $page, $SitesComplete, $ext); 
+} else {
+	$memberlist = str_replace(
+		'{ERROR}', $acc_Language['msg']['error']['msqlerror'], 
+		$acc_Language['msg']['members']['errorline']
+	);
+	$listflag = false;
+}
+if ($ar !== false && $listflag === true) {
+	if ($ar !== null) {
+		$memberlist = '';
+		$i=0;
+		foreach ($ar as $key) {
+			$acc_Template->loadTPL('members_list');
+			switch ($key->geschlecht) {
+				case 0:
+					$gender = $acc_Language['gender']['male'];
+					break;
+				case 1:
+					$gender = $acc_Language['gender']['female'];
+					break;
+				case 2:
+					$gender = $acc_Language['gender']['unknown'];
+					break;
+				default:
+					$gender = $acc_Language['gender']['male'];
+					break;
+			}
+			$acc_Template->assignVarsTPL(array(
+				'user_id' => $key->id,
+				'user_name' => $key->username,
+				'user_rights' => $key->rechte,
+				'user_frights' => $key->forenrechte,
+				'user_gender' => $gender,
+				'user_active' => $key->aktiv
+			));
+			if ($i%2) {
+				$acc_Template->assignVarTPL('bgcolor', $acc_Config['table']['cell']['color2']);
+			} else {
+				$acc_Template->assignVarTPL('bgcolor', $acc_Config['table']['cell']['color1']);
+			}
+			$i++;
+			$memberlist .= $acc_Template->getTPL();
+		}
+	} else {
+		if ($flag === false) {
+			$memberlist = $acc_Language['msg']['members']['nosearchresult'];
+		} else {
+			$memberlist = $acc_Language['msg']['members']['nomembers'];
+		}
+	}
+} else {
+	$memberlist = str_replace(
+		'{ERROR}', $acc_Language['msg']['error']['msqlerror'], 
+		$acc_Language['msg']['members']['errorline']
+	);
+}
+
+$acc_Template->assignVars(array(
+	'sitenavigation' => $sitenavigation,
+	'memberlist' => $memberlist,
+	'page' => $page,
+	'ext' => $ext
+));
+
+?>

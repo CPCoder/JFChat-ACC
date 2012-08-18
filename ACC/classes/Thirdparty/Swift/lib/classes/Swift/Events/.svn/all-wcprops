@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Events
+END
+EventObject.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Events/EventObject.php
+END
+ResponseEvent.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Events/ResponseEvent.php
+END
+Event.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Events/Event.php
+END
+TransportExceptionListener.php
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Events/TransportExceptionListener.php
+END
+SendListener.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Events/SendListener.php
+END
+CommandListener.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Events/CommandListener.php
+END
+EventDispatcher.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Events/EventDispatcher.php
+END
+TransportChangeEvent.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Events/TransportChangeEvent.php
+END
+TransportChangeListener.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Events/TransportChangeListener.php
+END
+EventListener.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Events/EventListener.php
+END
+CommandEvent.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Events/CommandEvent.php
+END
+SimpleEventDispatcher.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Events/SimpleEventDispatcher.php
+END
+SendEvent.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Events/SendEvent.php
+END
+TransportExceptionEvent.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Events/TransportExceptionEvent.php
+END
+ResponseListener.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/lib/classes/Swift/Events/ResponseListener.php
+END

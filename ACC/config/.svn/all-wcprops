@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/shs_private/!svn/ver/69/ACC/trunk/config
+END
+error_reporting.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/shs_private/!svn/ver/69/ACC/trunk/config/error_reporting.php
+END
+defines.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/shs_private/!svn/ver/69/ACC/trunk/config/defines.php
+END
+additional_overview.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/shs_private/!svn/ver/69/ACC/trunk/config/additional_overview.php
+END
+config.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/shs_private/!svn/ver/69/ACC/trunk/config/config.php
+END
+.htaccess
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/shs_private/!svn/ver/69/ACC/trunk/config/.htaccess
+END

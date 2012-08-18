@@ -1,0 +1,75 @@
+<?php
+/*
+ * Project		ACC
+ * Filename		install.php
+ * Author		Steffen Haase
+ * Date			14.01.2012
+ * License		GPL v3
+ */
+
+$installpath = __DIR__;
+$installpath = str_replace('install', '', $installpath);
+
+define('ACC_SCRIPT_STARTTIME', microtime(true));
+define('ACC_PATH_SERVER', $installpath);
+
+if (version_compare(PHP_VERSION, '5.3','<')) {
+	echo '<br><br><center>'.
+			'<h2>!! Fatal Error !!</h4>'.
+			'Um das ACC (Admin-Control-Center) einsetzen zu k&ouml;nnen muss mind. PHP 5.3 installiert sein!<br><br>'.
+			'<u>Installierte PHP-Version:</u><br>'.PHP_VERSION.'<br><br>'.
+			'<u>Ben&ouml;tigte Mindest-PHP-Version</u><br>5.3.0';
+	exit;
+}
+require_once ACC_PATH_SERVER.'config/error_reporting.php';
+require_once ACC_PATH_SERVER.'config/config.php';
+require_once ACC_PATH_SERVER.'config/defines.php';
+require_once ACC_PATH_SERVER.'classes/Shs/TplEngine.php';
+require_once ACC_PATH_SERVER.'classes/Shs/Request.php';
+require_once ACC_PATH_SERVER.'classes/Shs/ErrorHandler.php';
+require_once ACC_PATH_SERVER.'classes/Shs/DebugManager.php';
+
+define('ACC_VERSION', '3.1.0');
+define('ACC_INSTALL', true);
+
+if (ACC_DEBUGMODE === true) {
+	$acc_Debugger = DebugManager::getInstance();
+	$old_error_handler = set_error_handler(array("ErrorHandler", "handleErrors"));
+}
+
+$acc_GetPost = Request::getInstance();
+$acc_Template = TplEngine::getInstance();
+$acc_Template->setInstall(true);
+$acc_Template->openTemplate('install');
+
+if ($acc_GetPost->_isSet('node')) {
+	if ($acc_GetPost->getInt('node') == 1) {
+		include ACC_PATH_SERVER.'install/include/checkfilesystem.php';
+	} elseif ($acc_GetPost->getInt('node') == 2) {
+		include ACC_PATH_SERVER.'install/include/databasesetup.php';
+	} elseif ($acc_GetPost->getInt('node') == 3) {
+		include ACC_PATH_SERVER.'install/include/tablesetup.php';
+	} elseif ($acc_GetPost->getInt('node') == 4) {
+		include ACC_PATH_SERVER.'install/include/setadmin.php';
+	} elseif ($acc_GetPost->getInt('node') == 5) {
+		include ACC_PATH_SERVER.'install/include/finish.php';
+	} else {
+		$acc_Template->setSubTPL('start');
+	}
+} else {
+	$acc_Template->setSubTPL('start');
+}
+
+$acc_Template->assignVars(array(
+		'accversion' => substr(ACC_VERSION, 0, 1),
+		'charset' => ACC_CHARSET
+));
+$acc_Template->removeEmptyVars();
+if(ACC_DEBUGMODE) {
+	$acc_Debugger->addDebugBox();
+} else {
+	$acc_Template->assignVar('debug_box', '');
+}
+$acc_Template->printTemplate();
+
+?>

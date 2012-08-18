@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/acceptance/Swift/Mime
+END
+AttachmentAcceptanceTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/acceptance/Swift/Mime/AttachmentAcceptanceTest.php
+END
+SimpleMessageAcceptanceTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/acceptance/Swift/Mime/SimpleMessageAcceptanceTest.php
+END
+EmbeddedFileAcceptanceTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/acceptance/Swift/Mime/EmbeddedFileAcceptanceTest.php
+END
+MimePartAcceptanceTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/shs_private/!svn/ver/69/ACC/trunk/classes/Thirdparty/Swift/tests/acceptance/Swift/Mime/MimePartAcceptanceTest.php
+END

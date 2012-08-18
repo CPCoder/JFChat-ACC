@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates
+END
+acc.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/acc.tpl
+END
+acc_admins.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/acc_admins.tpl
+END
+acc_admins_new.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/acc_admins_new.tpl
+END
+members_list.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/members_list.tpl
+END
+navigation_entry.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/navigation_entry.tpl
+END
+nonavi.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/nonavi.tpl
+END
+pictures_list.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/pictures_list.tpl
+END
+login.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/login.tpl
+END
+logout.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/logout.tpl
+END
+acc_groups_list.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/acc_groups_list.tpl
+END
+gallery_list.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/gallery_list.tpl
+END
+members_edit.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/members_edit.tpl
+END
+acc_groups.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/acc_groups.tpl
+END
+gallery.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/gallery.tpl
+END
+index.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/index.tpl
+END
+checkname.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/checkname.tpl
+END
+navigation_sublist.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/navigation_sublist.tpl
+END
+navigation.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/navigation.tpl
+END
+pictures.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/pictures.tpl
+END
+acc_groups_edit.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/acc_groups_edit.tpl
+END
+members.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/members.tpl
+END
+overview.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/overview.tpl
+END
+acc_admins_new_list.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/acc_admins_new_list.tpl
+END
+members_new.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/members_new.tpl
+END
+sysmessage.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/sysmessage.tpl
+END
+acc_admins_list.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/acc_admins_list.tpl
+END
+.htaccess
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/shs_private/!svn/ver/69/ACC/trunk/templates/.htaccess
+END

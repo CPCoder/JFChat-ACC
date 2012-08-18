@@ -1,0 +1,151 @@
+<?php
+/*
+ * Project		ACC
+ * Filename		class.user.php
+ * Author		Steffen Haase
+ * Date			08.11.2011
+ * Copyright	(c) 2010-2011 SHS (Steffen Haase Software)
+ * Contact		info@sh-software.de
+ */
+
+require_once ACC_PATH_SERVER.'classes/Shs/DbConnect.php';
+require_once ACC_PATH_SERVER.'classes/Shs/Groups.php';
+
+/**
+ * Klasse für User Daten
+ * 
+ * Über diese Klasse können verschiedene Userrelevante Daten abgefragt werden.
+ * 
+ * @package Shs
+ * @author Steffen Haase <info@sh-software.de>
+ * @version 1.0
+ * @copyright Copyright (c) 2009-2011 SHS (Steffen Haase Software)
+ */
+class User
+{
+	private $_db;
+	private $_groups;
+	private $_UserID;
+	private $_UserName;
+	private $_UserGroups;
+	private	$_UserPermissions;
+	
+	/**
+	 * Konstruktor<br><br>
+	 * Der Konstruktor lädt alle notwendigen User-Informationen, wie z.B.:<br>
+	 * - Namen des Users
+	 * - Die Berechtigungen des Users
+	 * 
+	 * @author Steffen Haase <info@sh-software.de>
+	 * @access public
+	 * @param Integer $id ID des Users 
+	 */
+	public function __construct($id) {
+		$this->_UserID = $id;
+		$this->_db = DBConnect::getInstance();
+		$this->_groups = Groups::getInstance();
+		$this->loadUserData();
+	}
+	
+	/**
+	 * Gibt den Namen des Users zurück.
+	 * 
+	 * @author Steffen Haase <info@sh-software.de>
+	 * @access public
+	 * @return String Name des Users
+	 */
+	public function getUsername() {
+		return $this->_UserName;
+	}
+	
+	/**
+	 * @author Steffen Haase <info@sh-software.de>
+	 * @ignore
+	 */
+	private function setUsername($name) {
+		$this->_UserName = (string)$name;
+	}
+	
+	/**
+	 * @author Steffen Haase <info@sh-software.de>
+	 * @ignore
+	 */
+	private function setUserGroups($groups) {
+		$this->_UserGroups = (array)$groups;
+	}
+	
+	/**
+	 * @author Steffen Haase <info@sh-software.de>
+	 * @ignore
+	 */
+	private function setUserPermissions($permissions) {
+		$this->_UserPermissions = (array)$permissions;
+	}
+	
+	public function getUserGroupNames() {
+		$groupnames = array();
+		foreach ($this->_UserGroups as $key => $val) {
+			$groupnames[] = $val->name;
+		}
+		sort($groupnames);
+		return $groupnames;
+	}
+	
+	public function getUserGroupIDs() {
+		$groupids = array();
+		foreach ($this->_UserGroups as $key => $val) {
+			$groupids[] = $val->id;
+		}
+		return $groupids;
+	}
+	
+	public function getUserPermissions() {
+		sort($this->_UserPermissions);
+		return $this->_UserPermissions;
+	}
+	/**
+	 * Prüft ob der User eine Berechtigung für einen bestimmten Bereich hat.<br>
+	 * Das Synonym des Bereiches ist gleichzeitig der Wert, der per "site=" an die Anwendung 
+	 * übergeben wird, ebenfalls muss dieser Wert auch in der Datenbank 
+	 * (Tabelle: <prefix>acc_navigation, Spalte: section) gesetzt sein!
+	 * 
+	 * @author Steffen Haase <info@sh-software.de>
+	 * @access public
+	 * @param String $section Synonym für den Bereich
+	 * @return Boolean true oder false
+	 */
+	public function hasPermission($section) {
+		if (in_array($section, $this->_UserPermissions)) {
+			return true;
+		}
+		return false;
+	}
+	
+	/**
+	 * @author Steffen Haase <info@sh-software.de>
+	 * @access private
+	 * @ignore
+	 */
+	private function loadUserData() {
+		$res = $this->_db->querySingleItem(
+					"SELECT username ".
+					"FROM ".TABLE_JF_REGISTRY." ".
+					"WHERE id=".$this->_UserID
+				, 'User.php');
+		if ($res !== false && $res != null) {
+			$this->setUsername($res);
+		}
+		$this->setUserGroups(
+			$this->_groups->getUserGroups($this->_UserID)
+		);
+		$this->setUserPermissions(
+			$this->_groups->getGroupPermissions(
+				$this->_groups->getGroupIDsAsString($this->_UserID)
+			)
+		);
+	}
+
+	
+} 
+
+?>
